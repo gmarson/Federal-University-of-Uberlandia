@@ -1,0 +1,586 @@
+\documentclass[12pt,a4paper,twoside]{report}
+% -------------------------------------------------------------------- %
+% Pacotes
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[fixlanguage]{babelbib}
+\usepackage[pdftex]{graphicx}      % usamos arquivos pdf/png como figuras
+\usepackage{setspace}              % espaçamento flexvel
+\usepackage{indentfirst}           % indentação do primeiro parágrafo
+\usepackage{makeidx}               % índice remissivo
+\usepackage[nottoc]{tocbibind}     % acrescentamos a bibliografia/indice/conteudo no Table of Contents
+\usepackage{courier}               % usa o Adobe Courier no lugar de Computer Modern Typewriter
+\usepackage{type1cm}               % fontes realmente escaláveis
+\usepackage{titletoc}
+\usepackage{ucs}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+\usepackage[a4paper,top=2.54cm,bottom=2.0cm,left=2.0cm,right=2.54cm]{geometry} % margens
+\usepackage{amsmath}
+
+\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,
+linkcolor=NavyBlue,urlcolor=DarkRed,filecolor=green,bookmarksopen=true]{hyperref} % links coloridos
+\usepackage[all]{hypcap}                % soluciona o problema com o hyperref e capítulos
+\usepackage[square,sort,nonamebreak,comma]{natbib}  % citação bibliográfica alpha
+\fontsize{60}{62}\usefont{OT1}{cmr}{m}{n}{\selectfont}
+\usepackage{upquote}                    % formata apóstrofes '
+\usepackage{textcomp}
+
+% Para formatar corretamente as URLs
+\usepackage{url}
+% -------------------------------------------------------------------- %
+% Cabeçalhos similares ao TAOCP de Donald E. Knuth
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\MakeUppercase{#1}}{}}
+\renewcommand{\headrulewidth}{0pt}
+
+% -------------------------------------------------------------------- %
+\graphicspath{{./imagens/}}        % caminho das figuras
+\frenchspacing                     % arruma o espaço: id est (i.e.) e exempli gratia (e.g.)
+\urlstyle{same}                    % URL com o mesmo estilo do texto e no mono-spaced
+\makeindex                         % para o índice remissivo
+\raggedbottom                      % para no permitir espaços extras no texto
+\fontsize{60}{62}\usefont{OT1}{cmr}{m}{n}{\selectfont}
+\cleardoublepage
+\normalsize
+
+% -------------------------------------------------------------------- %
+% Cores para formatação de código
+\usepackage{color}
+\definecolor{vermelho}{rgb}{0.6,0,0} % para strings
+\definecolor{verde}{rgb}{0.25,0.5,0.35} % para comentários
+\definecolor{roxo}{rgb}{0.5,0,0.35} % para palavras-chaves
+\definecolor{azul}{rgb}{0.25,0.35,0.75} % para strings
+\definecolor{cinza-claro}{gray}{0.95}
+% -------------------------------------------------------------------- %
+% Opções de listagem usados para o código fonte
+% Ref: http://en.wikibooks.org/wiki/LaTeX/Packages/Listings
+
+
+
+\usepackage{listings}           % para formatar código-fonte (ex. em Java)
+
+
+\lstset{ %
+language=Python,                      % seleciona a linguagem do código
+basicstyle=\footnotesize\ttfamily,    % o tamanho da fonte usado no código
+commentstyle=\color{verde}\bfseries,  % formatação de comentários
+stringstyle=\color{azul},             % formatação de strings
+upquote=true,
+numbers=left,                   % onde colocar os números de linha
+numberstyle=\tiny,  % o tamanho da fonte usada para a numeração das linhas
+stepnumber=1,                   % o intervalo entre dois números de linhas. Se for 1, numera cada uma.
+numbersep=5pt,                  % how far the line-numbers are from the code
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+keywordstyle=\color{roxo}\bfseries,
+keywordstyle=[1]\color{roxo}\bfseries,
+keywordstyle=[2]\color{verde}\bfseries,
+frame=b,                   % adds a frame around the code
+framerule=0.6pt,
+tabsize=2,                      % sets default tabsize to 2 spaces
+captionpos=t,                   % sets the caption-position to top
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+escapeinside={\%*}{*)},         % if you want to add a comment within your code
+backgroundcolor=\color[rgb]{1.0,1.0,1.0}, % choose the background color.
+rulecolor=\color[rgb]{0.8,0.8,0.8},
+extendedchars=true,
+xleftmargin=10pt,
+xrightmargin=10pt,
+framexleftmargin=10pt,
+framexrightmargin=10pt,
+literate={â}{{\^{a}}}1  % para formatar corretamente os acentos do Português ao usar utf8
+    {ê}{{\^{e}}}1
+    {ô}{{\^{o}}}1
+    {Â}{{\^{A}}}1
+    {Ê}{{\^{E}}}1
+    {Ô}{{\^{O}}}1
+    {á}{{\'{a}}}1
+    {é}{{\'{e}}}1
+    {í}{{\'{i}}}1
+    {ó}{{\'{o}}}1
+    {ú}{{\'{u}}}1
+    {Á}{{\'{A}}}1
+    {É}{{\'{E}}}1
+    {Í}{{\'{I}}}1
+    {Ó}{{\'{O}}}1
+    {Ú}{{\'{U}}}1
+    {à}{{\`{a}}}1
+    {À}{{\`{A}}}1
+    {ã}{{\~{a}}}1
+    {õ}{{\~{o}}}1
+    {Ã}{{\~{A}}}1
+    {Õ}{{\~{O}}}1
+    {ç}{{\c{c}}}1
+    {Ç}{{\c{C}}}1
+    {ü}{{\"u}}1
+    {Ü}{{\"U}}1
+}
+
+\renewcommand{\lstlistingname}{Listagem}
+\renewcommand{\lstlistlistingname}{Lista de Listagens}
+
+% Definição de novos estilos
+\lstdefinestyle{Bash}
+    {language=bash,frame=single,numbers=none,basicstyle=\footnotesize\ttfamily,
+     morekeywords={cp,mkdir,sudo,tar}}
+
+% Definição de novos ambientes
+\lstnewenvironment{terminal}
+  {\lstset{style=Bash}}
+  {}
+
+\lstnewenvironment{python}
+  {\lstset{basicstyle=\scriptsize\ttfamily,
+           frame=single,
+           frameround=tttt,
+           framerule=2pt,
+           numbers=none,
+           rulecolor=\color{Salmon}}}
+  {}
+
+\lstnewenvironment{ide}
+  {\lstset{frame=single,
+            frameround=tttt,
+            numbers=none,
+            basicstyle=\ttfamily,
+            framerule=2pt,
+            rulecolor=\color{CadetBlue}}}
+  {}
+
+\lstnewenvironment{latex}
+   {\lstset{language=[LaTex]TeX,
+            basicstyle=\scriptsize\ttfamily,
+            frame=none,
+            numbers=none}}
+   {}
+
+
+% Formata o caption da listagem
+% \DeclareCaptionFont{blue}{\color{blue}}
+
+% \captionsetup[lstlisting]{singlelinecheck=false, labelfont={blue}, textfont={blue}}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox[cmyk]{0.43, 0.35, 0.35,0.01}{\parbox{\textwidth}{\hspace{15pt}#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white, singlelinecheck=false, margin=0pt, font={bf,footnotesize}}
+
+\newcommand{\ListingsPath}{./codigos}
+% Inclui o nome do arquivo como Caption
+\newcommand{\filelisting}[2][]{%
+    \lstinputlisting[caption={\texttt{\detokenize{#2}}},#1]{\ListingsPath/#2}%
+}
+
+% ---------------------------------------------------------------------------- %
+
+% ---------------------------------------------------------------------------- %
+
+\title{Análise de Complexidade de Tempo do Método Radix Sort}
+\date{}
+\author{Eduardo Costa de Paiva \\
+\texttt{\small \url{eduardocspv@gmail.com}}\\
+Frederico Franco Calhau \\
+\texttt{\small \url{fredericoffc@gmail.com}}\\
+Gabriel Augusto Marson \\
+\texttt{\small \url{gabrielmarson@live.com}}\\
+\vspace{1cm} \\
+Faculdade de Computação \\
+Universidade Federal de Uberlândia
+}
+\date{\today}
+
+\begin{document}
+  \maketitle
+% -------------------------------------------------------------------- %
+% Listas de figuras, tabelas e códigos criadas automaticamente
+\listoffigures
+\listoftables
+\lstlistoflistings
+% -------------------------------------------------------------------- %
+
+% -------------------------------------------------------------------- %
+% Sumário
+\tableofcontents
+
+% Capítulos do trabalho
+
+% cabeçalho para as páginas de todos os capítulos
+\fancyhead[RE,LO]{\thesection}
+
+%\singlespacing              % espaçamento simples
+\setlength{\parskip}{0.15in} % espaçamento entre paragráfos
+
+\chapter{Introdução}
+Este documento foi feito com o intuito de exibir uma análise do algoritmo Radix Sort
+com relação a tempo. Além disso, será feita uma comparação da curva de tempo do que se espera do
+algoritmo, ou seja, $O(n)$ com o caso prático.
+
+\section{Diretório}
+
+Dada a seguinte organização das pastas, utilizamos o arquivo testdriver.py,  executando, uma função conveniente por vez. Para mais informações vá até ao apêndice.
+
+OBS.: É necessário instalar o programa tree pelo terminal. Isso pode ser feito da seguinte maneira.
+
+\begin{terminal}
+> sudo apt-get install tree
+\end{terminal}
+
+A seguir é mostrada a organização das pastas sendo que os diretórios significativas para o projeto são Codigos e Relatorio além do raíz:
+\begin{terminal}
+
+  tree --charset=ASCII -d
+  .
+  |-- Codigos
+  |   |-- Bubble
+  |   |   `-- __pycache__
+  |   |-- Bucket
+  |   |   `-- __pycache__
+  |   |-- Counting
+  |   |   `-- __pycache__
+  |   |-- Heap
+  |   |   `-- __pycache__
+  |   |-- Insertion
+  |   |   `-- __pycache__
+  |   |-- Merge
+  |   |   `-- __pycache__
+  |   |-- Quick
+  |   |   `-- __pycache__
+  |   |-- Radix
+  |   |   `-- __pycache__
+  |   `-- Selection
+  |       `-- __pycache__
+  |-- Other
+  |-- Plot
+  |-- __pycache__
+  `-- relatorio
+      |-- imagens
+      |   |-- Bubble
+      |   |-- Bucket
+      |   |-- Counting
+      |   |-- Heap
+      |   |-- Insertion
+      |   |-- Merge
+      |   |-- Quick
+      |   |-- Radix
+      |   `-- Selection
+      |-- Relatorio_Bubble
+      |-- Relatorio_Bucket
+      |-- Relatorio_Counting
+      |-- Relatorio_Heap
+      |-- Relatorio_Insertion
+      |-- Relatorio_Merge
+      |-- Relatorio_Radix
+      |-- Relatorio_Selection
+      `-- Resultados
+          |-- Bubble
+          |-- Bucket
+          |-- Counting
+          |-- Heap
+          |-- Insertion
+          |-- Merge
+          |-- Quick
+          |-- Radix
+          `-- Selection
+
+  51 directories
+
+\end{terminal}
+
+\section{Códigos de programas}
+Seguem os códigos utilizados na análise de tempo do algoritmo Radix Sort.
+\begin{enumerate}
+
+\item RadixSort.py:
+Disponível na Listagem~\ref{arq:RadixSort}.
+\lstinputlisting[caption={RadixSort.py \label{arq:RadixSort}}]{../../Codigos/Radix/RadixSort.py}
+
+\item testeGeneric.py
+Disponível na Listagem ~\ref{arq:testeGeneric}
+\lstinputlisting[caption={testeGeneric.py \label{arq:testeGeneric}}]{../../testeGeneric.py}
+
+\item monitor.py
+Disponível na Listagem~\ref{arq:monitor}
+\lstinputlisting[caption={monitor.py \label{arq:monitor}}]{../../monitor.py}
+
+
+\item testdriver.py
+ Referenciado no apêndice~\ref{ap:testdriver}.
+\end{enumerate}
+
+
+\chapter{Gráficos}
+
+Seguem os Gráficos utilizadas no processo de análise do método Radix Sort:
+OBS.: Como o método Radix Sort não realiza comparações, não foi possível listar o gráfico de comparações.
+
+\begin{enumerate}
+
+	\item Para um vetor aleatório
+	\begin{enumerate}
+		\item Complexidade de tempo do método Radix Sort disponível na lista de imagens ~\ref{fig:RadixPlot2A}.
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.6]{../imagens/Radix/radix_plot_2_aleatorio.png}
+			\caption{Complexidade de tempo do método Radix Sort (Vetor Aleatório)\label{fig:RadixPlot2A}}
+		\end{figure}
+
+
+		\item Complexidade de tempo do método Radix Sort com mínimos quadrados disponível na lista de imagens ~\ref{fig:RadixPlot3A}.
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.6]{../imagens/Radix/radix_plot_3_aleatorio.png}
+			\caption{Complexidade de tempo do método Radix Sort com mínimos quadrados (Vetor Aleatório) \label{fig:RadixPlot3A}}
+		\end{figure}
+
+	\end{enumerate}
+
+	\item Para um vetor ordenado crescente
+		\begin{enumerate}
+
+			\item Complexidade de tempo do método Radix Sort disponível na lista de imagens ~\ref{fig:RadixPlot2OC}.
+			\begin{figure}[!h]
+				\centering
+				\includegraphics[scale=0.6]{../imagens/Radix/radix_plot_2_ordenado_crescente.png}
+				\caption{Complexidade de tempo do método Radix Sort (Vetor Ordenado Crescente) \label{fig:RadixPlot2OC}}
+			\end{figure}
+
+
+			\item Complexidade de tempo do método Radix Sort com mínimos quadrados disponível na lista de imagens ~\ref{fig:RadixPlot3OC}.
+			\begin{figure}[!h]
+				\centering
+				\includegraphics[scale=0.6]{../imagens/Radix/radix_plot_3_ordenado_crescente.png}
+				\caption{Complexidade de tempo do método Radix Sort com mínimos quadrados (Vetor Ordenado Crescente) \label{fig:RadixPlot3OC}}
+			\end{figure}
+
+		\end{enumerate}
+
+
+
+		\item Para um vetor ordenado decrescente
+				\begin{enumerate}
+
+					\item Complexidade de tempo do método Radix Sort disponível na lista de imagens ~\ref{fig:RadixPlot2OD}.
+					\begin{figure}[!h]
+						\centering
+						\includegraphics[scale=0.6]{../imagens/Radix/radix_plot_2_ordenado_decrescente.png}
+						\caption{Complexidade de tempo do método Radix Sort (Vetor Ordenado Decrescente) \label{fig:RadixPlot2OD}}
+					\end{figure}
+
+
+					\item Complexidade de tempo do método Radix Sort com mínimos quadrados disponível na lista de imagens  ~\ref{fig:RadixPlot3OD}.
+					\begin{figure}[!h]
+						\centering
+						\includegraphics[scale=0.6]{../imagens/Radix/radix_plot_3_ordenado_decrescente.png}
+						\caption{Complexidade de tempo do método Radix Sort com mínimos quadrados (Vetor Ordenado Decrescente) \label{fig:RadixPlot3OD}}
+					\end{figure}
+
+				\end{enumerate}
+
+
+			\item Para um vetor parcialmente ordenado crescente
+							\begin{enumerate}
+								\item Complexidade de tempo do método Radix Sort disponível na lista de imagens ~\ref{fig:RadixPlot2POC}.
+								\begin{figure}[!h]
+									\centering
+									\includegraphics[scale=0.6]{../imagens/Radix/radix_plot_2_parcialmente_ordenado_crescente.png}
+									\caption{Complexidade de tempo do método Radix Sort (Vetor Parcialmente Ordenado Crescente) \label{fig:RadixPlot2POC}}
+								\end{figure}
+
+
+								\item Complexidade de tempo do método Radix Sort com mínimos quadrados disponível na lista de imagens  ~\ref{fig:RadixPlot3POC}.
+								\begin{figure}[!h]
+									\centering
+									\includegraphics[scale=0.6]{../imagens/Radix/radix_plot_3_parcialmente_ordenado_crescente.png}
+									\caption{Complexidade de tempo do método Radix Sort com mínimos quadrados (Vetor Parcialmente Ordenado Crescente) \label{fig:RadixPlot3POC}}
+								\end{figure}
+
+							\end{enumerate}
+
+
+			\item Para um vetor parcialmente ordenado decrescente
+
+										\begin{enumerate}
+											\item Complexidade de tempo do método Radix Sort disponível na lista de imagens ~\ref{fig:RadixPlot2POD}.
+											\begin{figure}[!h]
+												\centering
+												\includegraphics[scale=0.6]{../imagens/Radix/radix_plot_2_parcialmente_ordenado_decrescente.png}
+												\caption{Complexidade de tempo do método Radix Sort (Vetor Parcialmente Ordenado Decrescente) \label{fig:RadixPlot2POD}}
+											\end{figure}
+
+
+											\item Complexidade de tempo do método Radix Sort com mínimos quadrados disponível na lista de imagens  ~\ref{fig:RadixPlot3POD}.
+											\begin{figure}[!h]
+												\centering
+												\includegraphics[scale=0.6]{../imagens/Radix/radix_plot_3_parcialmente_ordenado_decrescente.png}
+												\caption{Complexidade de tempo do método Radix Sort com mínimos quadrados (Vetor Parcialmente Ordenado Decrescente) \label{fig:RadixPlot3POD}}
+											\end{figure}
+
+										\end{enumerate}
+
+
+\end{enumerate}
+
+\chapter{Tabelas}
+
+Seguem as tabelas utilizadas para a análise do método Radix Sort.
+
+\begin{table}[h]
+  \centering
+  \caption{Vetor Aleatório \label{tab:aleatorio}}
+  \begin{tabular}{ccc} \\\hline
+  \textbf{Tamanho do Vetor}  & \textbf{Tempo(s)} \\\hline
+  32                                   & 0.001969         \\\hline
+  64                                   & 0.003053          \\\hline
+  128                                  & 0.005992         \\\hline
+  256                                  & 0.012797          \\\hline
+  512                                  & 0.023158          \\\hline
+  1024                                 & 0.051994          \\\hline
+  2048                                 & 0.092159          \\\hline
+  4096                                 & 0.202499         \\\hline
+  8192                                 & 0.370421        \\\hline
+  16384                                & 0.758604        \\\hline
+  32768                                & 1.619927        \\\hline
+  65536                                & 4.523400        \\\hline
+  131072                               & 9.818129        \\\hline
+  262144                               & 18.306709        \\\hline
+  524288                               & 36.800410        \\\hline
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+  \centering
+  \caption{Vetor Ordenado Crescente \label{tab:oc}}
+  \begin{tabular}{ccc} \\\hline
+  \textbf{Tamanho do Vetor}  & \textbf{Tempo(s)} \\\hline
+  32                              & 0.002569          \\\hline
+  64                              & 0.004878          \\\hline
+  128                             & 0.009286          \\\hline
+  256                             & 0.018059          \\\hline
+  512                             & 0.035540          \\\hline
+  1024                            & 0.071870          \\\hline
+  2048                            & 0.139780          \\\hline
+  4096                            & 0.286223         \\\hline
+  8192                            & 0.576995         \\\hline
+  16384                           & 1.154050
+  \\\hline
+  32768                           & 2.276046         \\\hline
+  65536                           & 4.633520         \\\hline
+  131072                          & 9.113568         \\\hline
+  26214                           & 18.039597         \\\hline
+  524288                          & 37.771921        \\\hline
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+  \centering
+  \caption{Vetor Ordenado Decrescente \label{tab:od}}
+  \begin{tabular}{ccc} \\\hline
+  \textbf{Tamanho do Vetor}  & \textbf{Tempo(s)} \\\hline
+  32                              & 0.001840          \\\hline
+  64                              & 0.003180          \\\hline
+  128                             & 0.006559          \\\hline
+  256                             & 0.011725          \\\hline
+  512                             & 0.023004          \\\hline
+  1024                            & 0.050099          \\\hline
+  2048                            & 0.092232          \\\hline
+  4096                            & 0.199064         \\\hline
+  8192                            & 0.399744         \\\hline
+  16384                           & 0.797877
+  \\\hline
+  32768                           & 1.505112         \\\hline
+  65536                           & 4.643434         \\\hline
+  131072                          & 8.969211         \\\hline
+  262144                          & 18.060512         \\\hline
+  524288                          & 36.680364        \\\hline
+  \end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+  \centering
+  \caption{Vetor Parcialmente Ordenado Decrescente \label{tab:pod}}
+  \begin{tabular}{ccc} \\\hline
+  \textbf{Tamanho do Vetor}  & \textbf{Tempo(s)} \\\hline
+  32                              & 0.001891          \\\hline
+  64                              & 0.003064         \\\hline
+  128                             & 0.006604          \\\hline
+  256                             & 0.011961          \\\hline
+  512                             & 0.025210          \\\hline
+  1024                            & 0.048299          \\\hline
+  2048                            & 0.106676          \\\hline
+  4096                            & 0.279154         \\\hline
+  8192                            & 0.557848         \\\hline
+  16384                           & 1.147800
+  \\\hline
+  32768                           & 2.322026         \\\hline
+  65536                           & 4.530593         \\\hline
+  131072                          & 9.178682         \\\hline
+  262144                          & 18.287574         \\\hline
+  524288                          & 37.046162         \\\hline
+  \end{tabular}
+\end{table}
+
+
+
+\begin{table}[h]
+  \centering
+  \caption{Vetor Parcialmente Ordenado Crescente \label{tab:poc}}
+  \begin{tabular}{ccc} \\\hline
+  \textbf{Tamanho do Vetor}  & \textbf{Tempo(s)} \\\hline
+  32                              & 0.001702          \\\hline
+  64                              & 0.003069          \\\hline
+  128                             & 0.009290         \\\hline
+  256                             & 0.017940          \\\hline
+  512                             & 0.035721         \\\hline
+  1024                            & 0.070035          \\\hline
+  2048                            & 0.143542          \\\hline
+  4096                            & 0.294574
+  \\\hline
+  8192                            & 0.571618
+  \\\hline
+  16384                           & 1.151897
+  \\\hline
+  32768                           & 2.321207          \\\hline
+  65536                           & 4.564890          \\\hline
+  131072                          & 9.270520          \\\hline
+  262144                          & 18.408352          \\\hline
+  524288                          & 37.733941          \\\hline
+  \end{tabular}
+\end{table}
+
+
+\chapter{Análise}
+
+O Radix Sort é um algoritmo que dado um vetor, todos os elementos deste podem ser representados com d dígitos, onde d é uma constante. A ordenação é feita aplicando o algoritmo Counting Sort em cada dígito, o uso do Counting Sort se da pelo fato que este algoritmo é estável, além de possuir complexidade $O(n)$.
+
+Podemos observar que todas as curvas de todos os gráficos, exceto os de complexidade de tempo sem a interpolação dos mínimos quadrados(Gráficos \ref{fig:RadixPlot2A},\ref{fig:RadixPlot2OC},\ref{fig:RadixPlot2OD},\ref{fig:RadixPlot2POC},\ref{fig:RadixPlot2POD}), apresentaram uma correspondência forte com a curva da função $F(x) = x$, o que nos permite concluir que, dada a complexidade de tempo do algoritmo Radix Sort por $G(x)$ então $F(x) = c * G(x)$ sendo que $c$ é uma constante maior que zero e $x > x_0$. Portanto, o Radix Sort é $O(n)$.
+
+\chapter{Citações e referências bibliográficas}
+[1] Algoritmos: Teoria e Prática. Thomas H. Cormen
+		\date{Today}
+
+
+
+
+
+
+
+\clearpage
+\addcontentsline{toc}{part}{Apêndice}
+\appendix
+
+\chapter{Códigos extensos \label{ap:testdriver}}
+\section{testdriver.py}
+\lstinputlisting[label= {arq:testdriver.py}, caption={testdriver.py}] {testdriver2.py}
+
+
+\end{document}

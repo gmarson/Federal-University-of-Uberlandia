@@ -1,0 +1,14 @@
+\select@language {brazil}
+\contentsline {chapter}{Lista de Figuras}{2}{chapter*.1}
+\contentsline {chapter}{Lista de Tabelas}{3}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{6}{chapter.1}
+\contentsline {section}{\numberline {1.1}Diret\IeC {\'o}rio}{6}{section.1.1}
+\contentsline {section}{\numberline {1.2}C\IeC {\'o}digos de programas}{7}{section.1.2}
+\contentsline {chapter}{\numberline {2}Gr\IeC {\'a}ficos}{11}{chapter.2}
+\contentsline {chapter}{\numberline {3}Tabelas}{17}{chapter.3}
+\contentsline {chapter}{\numberline {4}An\IeC {\'a}lise}{20}{chapter.4}
+\contentsline {chapter}{\numberline {5}Cita\IeC {\c c}\IeC {\~o}es e refer\IeC {\^e}ncias bibliogr\IeC {\'a}ficas}{21}{chapter.5}
+\contentsline {part}{Ap\IeC {\^e}ndice}{22}{chapter.5}
+\contentsline {chapter}{\numberline {A}C\IeC {\'o}digos extensos }{22}{appendix.A}
+\contentsline {section}{\numberline {A.1}testdriver.py}{22}{section.A.1}
+\contentsfinish 

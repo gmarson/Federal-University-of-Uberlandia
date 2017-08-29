@@ -1,0 +1,1 @@
+ - Lembre de mudar o path nos arquivos teste(Nome_do_algoritmo).py

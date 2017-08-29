@@ -1,0 +1,4 @@
+http://www.tablesgenerator.com/   ## gerador fácil de tabelas
+sudo apt-get install pip python3-dev
+pip install -U psutil
+pip install -U memory_profiler
