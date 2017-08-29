@@ -1,0 +1,22 @@
+[X,Y] -> X  = COLUNA || Y = LINHA 
+
+MAPA INICIAL - HYRULE
+
+G: Grass
+S: Sand
+F: Forest
+M: Mountain
+W: Water
+#: Dungeon1
+$: Dungeon2
+%: Dungeon3
++: Sword       
+@: Character   Posição inicial [25,28]
+
+DUNGEONS
+
+0: Unreachable square (Dentro das Dungeons) +infinito
+G: Reachable square (Dentro das Dungeons) +10
+*: Pendant
+#, $, %: Entrada/Saída
+

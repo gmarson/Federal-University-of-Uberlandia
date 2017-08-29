@@ -1,0 +1,7 @@
+.gitignore~
+manual.log
+manual.toc
+manual.synctex.gz
+manual.out
+manual.aux
+
