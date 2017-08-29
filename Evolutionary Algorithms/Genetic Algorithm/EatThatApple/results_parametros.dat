@@ -1,0 +1,144 @@
+Tp = 50 + Nger = 50 + Tcross = 60 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 99
+Tempo de execução  101.29820561408997
+------------------------------------------
+
+Tp = 50 + Nger = 50 + Tcross = 60 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 107
+Tempo de execução  95.74887275695801
+------------------------------------------
+
+Tp = 50 + Nger = 50 + Tcross = 80 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 107
+Tempo de execução  129.08408164978027
+------------------------------------------
+
+Tp = 50 + Nger = 50 + Tcross = 80 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 106
+Tempo de execução  126.330739736557
+------------------------------------------
+
+Tp = 50 + Nger = 100 + Tcross = 60 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 90
+Tempo de execução  192.25994205474854
+------------------------------------------
+
+Tp = 50 + Nger = 100 + Tcross = 60 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 120
+Tempo de execução  150.90765595436096
+------------------------------------------
+
+Tp = 50 + Nger = 100 + Tcross = 80 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 111
+Tempo de execução  209.5251281261444
+------------------------------------------
+
+Tp = 50 + Nger = 100 + Tcross = 80 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 103
+Tempo de execução  206.40567421913147
+------------------------------------------
+
+Tp = 100 + Nger = 50 + Tcross = 60 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 161
+Tempo de execução  107.2067060470581
+------------------------------------------
+
+Tp = 100 + Nger = 50 + Tcross = 60 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 145
+Tempo de execução  104.06847763061523
+------------------------------------------
+
+Tp = 100 + Nger = 50 + Tcross = 80 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 156
+Tempo de execução  137.41990494728088
+------------------------------------------
+
+Tp = 100 + Nger = 50 + Tcross = 80 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 169
+Tempo de execução  134.93123650550842
+------------------------------------------
+
+Tp = 100 + Nger = 100 + Tcross = 60 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 158
+Tempo de execução  243.80909609794617
+------------------------------------------
+
+Tp = 100 + Nger = 100 + Tcross = 60 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 191
+Tempo de execução  245.4286072254181
+------------------------------------------
+
+Tp = 100 + Nger = 100 + Tcross = 80 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 155
+Tempo de execução  302.6759777069092
+------------------------------------------
+
+Tp = 100 + Nger = 100 + Tcross = 80 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 179
+Tempo de execução  316.6101906299591
+------------------------------------------
+
+Tp = 200 + Nger = 50 + Tcross = 60 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 182
+Tempo de execução  166.64594101905823
+------------------------------------------
+
+Tp = 200 + Nger = 50 + Tcross = 60 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 180
+Tempo de execução  155.09907460212708
+------------------------------------------
+
+Tp = 200 + Nger = 50 + Tcross = 80 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 193
+Tempo de execução  215.88107204437256
+------------------------------------------
+
+Tp = 200 + Nger = 50 + Tcross = 80 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 212
+Tempo de execução  204.09838342666626
+------------------------------------------
+
+Tp = 200 + Nger = 100 + Tcross = 60 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 261
+Tempo de execução  429.4559087753296
+------------------------------------------
+
+Tp = 200 + Nger = 100 + Tcross = 60 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 259
+Tempo de execução  415.9293041229248
+------------------------------------------
+
+Tp = 200 + Nger = 100 + Tcross = 80 + Tmut = 10
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 252
+Tempo de execução  524.0396852493286
+------------------------------------------
+
+Tp = 200 + Nger = 100 + Tcross = 80 + Tmut = 20
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 275
+Tempo de execução  525.8108975887299
+------------------------------------------
+

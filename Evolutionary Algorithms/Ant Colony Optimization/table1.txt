@@ -1,0 +1,6 @@
+        Evora  Faro  Badajoz Cordoba Madrid
+Aveiro   353   582     372     641    559
+Evora    0     231     99      426    502
+Faro     231   0       331     326    750
+Badajoz  99    331     0       269    403
+Cordoba  426   326     269     0      424

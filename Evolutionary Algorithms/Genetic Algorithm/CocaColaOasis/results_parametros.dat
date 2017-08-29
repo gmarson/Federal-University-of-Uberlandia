@@ -1,0 +1,72 @@
+Tp = 50 + Nger = 100 + Tcross = 40 + Tmut = 5
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 73
+Tempo de execução  268.4171619415283
+------------------------------------------
+
+Tp = 50 + Nger = 100 + Tcross = 40 + Tmut = 10
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 103
+Tempo de execução  342.7507908344269
+------------------------------------------
+
+Tp = 50 + Nger = 50 + Tcross = 40 + Tmut = 5
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 71
+Tempo de execução  197.45120120048523
+------------------------------------------
+
+Tp = 50 + Nger = 50 + Tcross = 40 + Tmut = 10
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 99
+Tempo de execução  189.3661961555481
+------------------------------------------
+
+Tp = 100 + Nger = 100 + Tcross = 80 + Tmut = 10
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 149
+Tempo de execução  1261.8300626277924
+------------------------------------------
+
+Tp = 100 + Nger = 100 + Tcross = 80 + Tmut = 20
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 163
+Tempo de execução  1075.5910840034485
+------------------------------------------
+
+Tp = 100 + Nger = 50 + Tcross = 80 + Tmut = 10
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 152
+Tempo de execução  351.55648255348206
+------------------------------------------
+
+Tp = 100 + Nger = 50 + Tcross = 80 + Tmut = 20
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 144
+Tempo de execução  464.0095455646515
+------------------------------------------
+
+Tp = 200 + Nger = 100 + Tcross = 160 + Tmut = 20
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 323
+Tempo de execução  2581.5734448432922
+------------------------------------------
+
+Tp = 200 + Nger = 100 + Tcross = 160 + Tmut = 40
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 304
+Tempo de execução  2150.5943927764893
+------------------------------------------
+
+Tp = 200 + Nger = 50 + Tcross = 160 + Tmut = 20
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 327
+Tempo de execução  1019.9839985370636
+------------------------------------------
+
+Tp = 200 + Nger = 50 + Tcross = 160 + Tmut = 40
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 319
+Tempo de execução  978.4261436462402
+------------------------------------------
+

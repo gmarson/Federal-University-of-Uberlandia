@@ -1,0 +1,4 @@
+relatorio.*
+!relatorio.pdf
+!relatorio.tex
+/Figures

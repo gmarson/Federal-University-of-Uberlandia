@@ -1,0 +1,96 @@
+   S1   +  C1 +    R1
+
+
+Roleta + Ciclico + Normal
+Soluções ótimas econtradas: 6
+Tempo de execução  598.0872287750244
+------------------------------------------
+
+   S1   +  C1 +    R2
+
+
+Roleta + Ciclico + Elitismo
+Soluções ótimas econtradas: 3
+Tempo de execução  149.56605219841003
+------------------------------------------
+
+   S1   +  C2 +    R1
+
+
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 12
+Tempo de execução  336.90989875793457
+------------------------------------------
+
+   S1   +  C2 +    R2
+
+
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 8
+Tempo de execução  165.99700832366943
+------------------------------------------
+
+   S2   +  C1 +    R1
+
+
+Torneio + Ciclico + Normal
+Soluções ótimas econtradas: 6
+Tempo de execução  575.3423295021057
+------------------------------------------
+
+   S2   +  C1 +    R2
+
+
+Torneio + Ciclico + Elitismo
+Soluções ótimas econtradas: 3
+Tempo de execução  159.66102004051208
+------------------------------------------
+
+   S2   +  C2 +    R1
+
+
+Torneio + PMX + Normal
+Soluções ótimas econtradas: 5
+Tempo de execução  528.582985162735
+------------------------------------------
+
+   S2   +  C2 +    R2
+
+
+Torneio + PMX + Elitismo
+Soluções ótimas econtradas: 5
+Tempo de execução  177.11771392822266
+------------------------------------------
+
+   S3   +  C1 +    R1
+
+
+Torneio + Ciclico + Normal
+Soluções ótimas econtradas: 8
+Tempo de execução  594.0575182437897
+------------------------------------------
+
+   S3   +  C1 +    R2
+
+
+Torneio + Ciclico + Elitismo
+Soluções ótimas econtradas: 3
+Tempo de execução  180.35123109817505
+------------------------------------------
+
+   S3   +  C2 +    R1
+
+
+Torneio + PMX + Normal
+Soluções ótimas econtradas: 7
+Tempo de execução  524.9634959697723
+------------------------------------------
+
+   S3   +  C2 +    R2
+
+
+Torneio + PMX + Elitismo
+Soluções ótimas econtradas: 9
+Tempo de execução  162.71987628936768
+------------------------------------------
+

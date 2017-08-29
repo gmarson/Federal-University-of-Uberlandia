@@ -1,0 +1,84 @@
+   S1   +  C1 +    R1
+
+
+Soluções ótimas econtradas: 623
+Tempo de execução  397.95126605033875
+------------------------------------------
+
+   S1   +  C1 +    R2
+
+
+Soluções ótimas econtradas: 474
+Tempo de execução  133.50492334365845
+------------------------------------------
+
+   S1   +  C2 +    R1
+
+
+Soluções ótimas econtradas: 909
+Tempo de execução  129.90971612930298
+------------------------------------------
+
+   S1   +  C2 +    R2
+
+
+Soluções ótimas econtradas: 563
+Tempo de execução  97.30080890655518
+------------------------------------------
+
+   S2   +  C1 +    R1
+
+
+Soluções ótimas econtradas: 488
+Tempo de execução  347.6993315219879
+------------------------------------------
+
+   S2   +  C1 +    R2
+
+
+Soluções ótimas econtradas: 520
+Tempo de execução  121.18310403823853
+------------------------------------------
+
+   S2   +  C2 +    R1
+
+
+Soluções ótimas econtradas: 736
+Tempo de execução  159.28386187553406
+------------------------------------------
+
+   S2   +  C2 +    R2
+
+
+Soluções ótimas econtradas: 715
+Tempo de execução  73.19064402580261
+------------------------------------------
+
+   S3   +  C1 +    R1
+
+
+Soluções ótimas econtradas: 526
+Tempo de execução  288.1205470561981
+------------------------------------------
+
+   S3   +  C1 +    R2
+
+
+Soluções ótimas econtradas: 554
+Tempo de execução  113.81425881385803
+------------------------------------------
+
+   S3   +  C2 +    R1
+
+
+Soluções ótimas econtradas: 811
+Tempo de execução  151.35637259483337
+------------------------------------------
+
+   S3   +  C2 +    R2
+
+
+Soluções ótimas econtradas: 772
+Tempo de execução  73.85329961776733
+------------------------------------------
+

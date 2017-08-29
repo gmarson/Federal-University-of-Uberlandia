@@ -1,0 +1,96 @@
+   S1   +  C1 +    R1
+
+
+Roleta + Ciclico + Normal
+Soluções ótimas econtradas: 7
+Tempo de execução  270.0496597290039
+------------------------------------------
+
+   S1   +  C1 +    R2
+
+
+Roleta + Ciclico + Elitismo
+Soluções ótimas econtradas: 7
+Tempo de execução  113.65734028816223
+------------------------------------------
+
+   S1   +  C2 +    R1
+
+
+Roleta + PMX + Normal
+Soluções ótimas econtradas: 26
+Tempo de execução  436.38823437690735
+------------------------------------------
+
+   S1   +  C2 +    R2
+
+
+Roleta + PMX + Elitismo
+Soluções ótimas econtradas: 2
+Tempo de execução  199.16930603981018
+------------------------------------------
+
+   S2   +  C1 +    R1
+
+
+Torneio + Ciclico + Normal
+Soluções ótimas econtradas: 14
+Tempo de execução  527.1396260261536
+------------------------------------------
+
+   S2   +  C1 +    R2
+
+
+Torneio + Ciclico + Elitismo
+Soluções ótimas econtradas: 11
+Tempo de execução  195.617657661438
+------------------------------------------
+
+   S2   +  C2 +    R1
+
+
+Torneio + PMX + Normal
+Soluções ótimas econtradas: 14
+Tempo de execução  538.75457072258
+------------------------------------------
+
+   S2   +  C2 +    R2
+
+
+Torneio + PMX + Elitismo
+Soluções ótimas econtradas: 11
+Tempo de execução  219.63341283798218
+------------------------------------------
+
+   S3   +  C1 +    R1
+
+
+Torneio + Ciclico + Normal
+Soluções ótimas econtradas: 15
+Tempo de execução  439.13335275650024
+------------------------------------------
+
+   S3   +  C1 +    R2
+
+
+Torneio + Ciclico + Elitismo
+Soluções ótimas econtradas: 10
+Tempo de execução  209.9641673564911
+------------------------------------------
+
+   S3   +  C2 +    R1
+
+
+Torneio + PMX + Normal
+Soluções ótimas econtradas: 24
+Tempo de execução  524.3068561553955
+------------------------------------------
+
+   S3   +  C2 +    R2
+
+
+Torneio + PMX + Elitismo
+Soluções ótimas econtradas: 17
+Tempo de execução  162.7262408733368
+------------------------------------------
+
