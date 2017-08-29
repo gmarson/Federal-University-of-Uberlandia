@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.gabrielm.appalunos.Controller.Activity.ContactDisplayActivity"
+    tools:showIn="@layout/activity_contact_display">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/contact_display_phone_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefone"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/contact_display_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/contact_display_address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Endereço"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/contact_display_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/contact_display_email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/contact_display_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/contact_display_site_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Site"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/contact_display_site"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="22dp" />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</android.support.v4.widget.NestedScrollView>
