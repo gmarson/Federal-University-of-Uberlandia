@@ -1,3 +1,11 @@
- Trabalho final de Análise de Algoritmos
+## Comparison of sorting algorithms
 
-	O trabalho consiste na implementação dos métodos de ordenação vistos em sala e relatórios contendo a análise de tempo e espaço destes.
+The work consists in the implementation of methods that establishes a comparison between some sort algorithms and reports containing the analysis of time and space of them.
+
+People who greatly participates and made this project possible:
+ 
+ - Eduardo Costa de Paiva - [Eddcp](https://github.com/Eddcp)
+ - Frederico Franco Calhau - [theffc](https://github.com/theffc)
+
+##### Professor
+[Alexsandro Santos Soares](http://www.portal.facom.ufu.br/node/100) 
