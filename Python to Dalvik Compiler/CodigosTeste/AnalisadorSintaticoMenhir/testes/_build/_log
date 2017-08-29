@@ -1,0 +1,21 @@
+### Starting build.
+Backtrace:
+                      - Failed to build the target semanticoTest.byte
+                          - Building semanticoTest.byte:
+                              - Building semanticoTest.cmo:
+                                  - Failed to build all of these:
+                                      - Building semanticoTest.ml:
+                                          - Failed to build all of these:
+                                              - Building semanticoTest.mly
+                                              - Building semanticoTest.mlypack
+                                              - Building semanticoTest.mll
+                                      - Building semanticoTest.mli:
+                                          - Failed to build all of these:
+                                              - Building semanticoTest.mly
+                                              - Building semanticoTest.mlypack
+                                      - Building semanticoTest.mlpack
+                                      - Building semanticoTest.mli:
+                                          - Failed to build all of these:
+                                              - Building semanticoTest.mly
+                                              - Building semanticoTest.mlypack
+# Compilation unsuccessful.

@@ -1,0 +1,8 @@
+ocamllex lexico.mll
+ocamlc -c sintatico.mli
+ocamlc -c lexico.ml
+
+rlwrap ocaml
+#load "lexico.cmo";;
+#use "sintaticoArv.ml";;
+teste();;

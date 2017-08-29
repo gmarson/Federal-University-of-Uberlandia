@@ -1,0 +1,2479 @@
+State 0:
+programa' -> . programa [ # ]
+-- On WHILE shift to state 1
+-- On RETURN shift to state 53
+-- On PRINT shift to state 57
+-- On INPUTS shift to state 60
+-- On INPUTI shift to state 62
+-- On INPUTF shift to state 64
+-- On IF shift to state 66
+-- On ID shift to state 71
+-- On FOR shift to state 75
+-- On DEF shift to state 131
+-- On retorno shift to state 85
+-- On programa shift to state 155
+-- On print shift to state 86
+-- On loopWhile shift to state 88
+-- On loopFOR shift to state 89
+-- On list(instrucao) shift to state 156
+-- On leias shift to state 90
+-- On leiai shift to state 92
+-- On leiaf shift to state 94
+-- On instrucao shift to state 158
+-- On funcao shift to state 160
+-- On condicaoIF shift to state 96
+-- On comando shift to state 161
+-- On chamadafuncao shift to state 101
+-- On chamada shift to state 102
+-- On atribuicao shift to state 104
+-- On EOF reduce production list(instrucao) -> 
+
+State 1:
+loopWhile -> WHILE . exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 49
+-- On chamada shift to state 15
+
+State 2:
+exprLogicoAritmetica -> TRUE . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> TRUE 
+-- On VEZES reduce production exprLogicoAritmetica -> TRUE 
+-- On OU reduce production exprLogicoAritmetica -> TRUE 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> TRUE 
+-- On MODULO reduce production exprLogicoAritmetica -> TRUE 
+-- On MENOS reduce production exprLogicoAritmetica -> TRUE 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> TRUE 
+-- On MENOR reduce production exprLogicoAritmetica -> TRUE 
+-- On MAIS reduce production exprLogicoAritmetica -> TRUE 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> TRUE 
+-- On MAIOR reduce production exprLogicoAritmetica -> TRUE 
+-- On IN reduce production exprLogicoAritmetica -> TRUE 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> TRUE 
+-- On FPAR reduce production exprLogicoAritmetica -> TRUE 
+-- On E reduce production exprLogicoAritmetica -> TRUE 
+-- On DPONTOS reduce production exprLogicoAritmetica -> TRUE 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> TRUE 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> TRUE 
+
+State 3:
+exprLogicoAritmetica -> NOT . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 48
+-- On chamada shift to state 15
+
+State 4:
+exprLogicoAritmetica -> MENOS . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 47
+-- On chamada shift to state 15
+
+State 5:
+exprLogicoAritmetica -> LITSTRING . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> LITSTRING 
+-- On VEZES reduce production exprLogicoAritmetica -> LITSTRING 
+-- On OU reduce production exprLogicoAritmetica -> LITSTRING 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> LITSTRING 
+-- On MODULO reduce production exprLogicoAritmetica -> LITSTRING 
+-- On MENOS reduce production exprLogicoAritmetica -> LITSTRING 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> LITSTRING 
+-- On MENOR reduce production exprLogicoAritmetica -> LITSTRING 
+-- On MAIS reduce production exprLogicoAritmetica -> LITSTRING 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> LITSTRING 
+-- On MAIOR reduce production exprLogicoAritmetica -> LITSTRING 
+-- On IN reduce production exprLogicoAritmetica -> LITSTRING 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> LITSTRING 
+-- On FPAR reduce production exprLogicoAritmetica -> LITSTRING 
+-- On E reduce production exprLogicoAritmetica -> LITSTRING 
+-- On DPONTOS reduce production exprLogicoAritmetica -> LITSTRING 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> LITSTRING 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> LITSTRING 
+
+State 6:
+exprLogicoAritmetica -> LITINT . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> LITINT 
+-- On VEZES reduce production exprLogicoAritmetica -> LITINT 
+-- On OU reduce production exprLogicoAritmetica -> LITINT 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> LITINT 
+-- On MODULO reduce production exprLogicoAritmetica -> LITINT 
+-- On MENOS reduce production exprLogicoAritmetica -> LITINT 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> LITINT 
+-- On MENOR reduce production exprLogicoAritmetica -> LITINT 
+-- On MAIS reduce production exprLogicoAritmetica -> LITINT 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> LITINT 
+-- On MAIOR reduce production exprLogicoAritmetica -> LITINT 
+-- On IN reduce production exprLogicoAritmetica -> LITINT 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> LITINT 
+-- On FPAR reduce production exprLogicoAritmetica -> LITINT 
+-- On E reduce production exprLogicoAritmetica -> LITINT 
+-- On DPONTOS reduce production exprLogicoAritmetica -> LITINT 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> LITINT 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> LITINT 
+
+State 7:
+exprLogicoAritmetica -> LITFLOAT . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On VEZES reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On OU reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On MODULO reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On MENOS reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On MENOR reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On MAIS reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On MAIOR reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On IN reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On FPAR reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On E reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On DPONTOS reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> LITFLOAT 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> LITFLOAT 
+
+State 8:
+chamada -> ID . APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> ID . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On APAR shift to state 9
+-- On VIRG reduce production exprLogicoAritmetica -> ID 
+-- On VEZES reduce production exprLogicoAritmetica -> ID 
+-- On OU reduce production exprLogicoAritmetica -> ID 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> ID 
+-- On MODULO reduce production exprLogicoAritmetica -> ID 
+-- On MENOS reduce production exprLogicoAritmetica -> ID 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> ID 
+-- On MENOR reduce production exprLogicoAritmetica -> ID 
+-- On MAIS reduce production exprLogicoAritmetica -> ID 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> ID 
+-- On MAIOR reduce production exprLogicoAritmetica -> ID 
+-- On IN reduce production exprLogicoAritmetica -> ID 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> ID 
+-- On FPAR reduce production exprLogicoAritmetica -> ID 
+-- On E reduce production exprLogicoAritmetica -> ID 
+-- On DPONTOS reduce production exprLogicoAritmetica -> ID 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> ID 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> ID 
+
+State 9:
+chamada -> ID APAR . loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On separated_nonempty_list(VIRG,exprLogicoAritmetica) shift to state 41
+-- On loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) shift to state 42
+-- On exprLogicoAritmetica shift to state 44
+-- On chamada shift to state 15
+-- On FPAR reduce production loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) -> 
+
+State 10:
+exprLogicoAritmetica -> FALSE . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> FALSE 
+-- On VEZES reduce production exprLogicoAritmetica -> FALSE 
+-- On OU reduce production exprLogicoAritmetica -> FALSE 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> FALSE 
+-- On MODULO reduce production exprLogicoAritmetica -> FALSE 
+-- On MENOS reduce production exprLogicoAritmetica -> FALSE 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> FALSE 
+-- On MENOR reduce production exprLogicoAritmetica -> FALSE 
+-- On MAIS reduce production exprLogicoAritmetica -> FALSE 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> FALSE 
+-- On MAIOR reduce production exprLogicoAritmetica -> FALSE 
+-- On IN reduce production exprLogicoAritmetica -> FALSE 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> FALSE 
+-- On FPAR reduce production exprLogicoAritmetica -> FALSE 
+-- On E reduce production exprLogicoAritmetica -> FALSE 
+-- On DPONTOS reduce production exprLogicoAritmetica -> FALSE 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> FALSE 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> FALSE 
+
+State 11:
+exprLogicoAritmetica -> APAR . exprLogicoAritmetica FPAR [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 12
+-- On chamada shift to state 15
+
+State 12:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> APAR exprLogicoAritmetica . FPAR [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On FPAR shift to state 40
+-- On E shift to state 36
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+
+State 13:
+exprLogicoAritmetica -> exprLogicoAritmetica VEZES . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 14
+-- On chamada shift to state 15
+
+State 14:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On VEZES reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On MODULO reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On MENOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On MENOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On MAIS reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On MAIOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> exprLogicoAritmetica VEZES exprLogicoAritmetica 
+
+State 15:
+exprLogicoAritmetica -> chamada . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> chamada 
+-- On VEZES reduce production exprLogicoAritmetica -> chamada 
+-- On OU reduce production exprLogicoAritmetica -> chamada 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> chamada 
+-- On MODULO reduce production exprLogicoAritmetica -> chamada 
+-- On MENOS reduce production exprLogicoAritmetica -> chamada 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> chamada 
+-- On MENOR reduce production exprLogicoAritmetica -> chamada 
+-- On MAIS reduce production exprLogicoAritmetica -> chamada 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> chamada 
+-- On MAIOR reduce production exprLogicoAritmetica -> chamada 
+-- On IN reduce production exprLogicoAritmetica -> chamada 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> chamada 
+-- On FPAR reduce production exprLogicoAritmetica -> chamada 
+-- On E reduce production exprLogicoAritmetica -> chamada 
+-- On DPONTOS reduce production exprLogicoAritmetica -> chamada 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> chamada 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> chamada 
+
+State 16:
+exprLogicoAritmetica -> exprLogicoAritmetica OU . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 17
+-- On chamada shift to state 15
+
+State 17:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica OU exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica OU exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica OU exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica OU exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica OU exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica OU exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica OU exprLogicoAritmetica 
+
+State 18:
+exprLogicoAritmetica -> exprLogicoAritmetica MODULO . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 19
+-- On chamada shift to state 15
+
+State 19:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On VEZES reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On MODULO reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On MENOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On MENOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On MAIS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On MAIOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MODULO exprLogicoAritmetica 
+
+State 20:
+exprLogicoAritmetica -> exprLogicoAritmetica MENOS . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 21
+-- On chamada shift to state 15
+
+State 21:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On MODULO shift to state 18
+-- On DIVIDIDO shift to state 22
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On MENOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On MENOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On MAIS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On MAIOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOS exprLogicoAritmetica 
+
+State 22:
+exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 23
+-- On chamada shift to state 15
+
+State 23:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On VEZES reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On MODULO reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On MENOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On MENOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On MAIS reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On MAIOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIVIDIDO exprLogicoAritmetica 
+
+State 24:
+exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 25
+-- On chamada shift to state 15
+
+State 25:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MAIS shift to state 26
+-- On DIVIDIDO shift to state 22
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On MENOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On MAIOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENORIGUAL exprLogicoAritmetica 
+
+State 26:
+exprLogicoAritmetica -> exprLogicoAritmetica MAIS . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 27
+-- On chamada shift to state 15
+
+State 27:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On MODULO shift to state 18
+-- On DIVIDIDO shift to state 22
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On MENOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On MENOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On MAIS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On MAIOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIS exprLogicoAritmetica 
+
+State 28:
+exprLogicoAritmetica -> exprLogicoAritmetica MENOR . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 29
+-- On chamada shift to state 15
+
+State 29:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MAIS shift to state 26
+-- On DIVIDIDO shift to state 22
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On MENOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On MAIOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MENOR exprLogicoAritmetica 
+
+State 30:
+exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 31
+-- On chamada shift to state 15
+
+State 31:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MAIS shift to state 26
+-- On DIVIDIDO shift to state 22
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On MENOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On MAIOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIORIGUAL exprLogicoAritmetica 
+
+State 32:
+exprLogicoAritmetica -> exprLogicoAritmetica MAIOR . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 33
+-- On chamada shift to state 15
+
+State 33:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MAIS shift to state 26
+-- On DIVIDIDO shift to state 22
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On MENOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On MAIOR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> exprLogicoAritmetica MAIOR exprLogicoAritmetica 
+
+State 34:
+exprLogicoAritmetica -> exprLogicoAritmetica IGUALDADE . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 35
+-- On chamada shift to state 15
+
+State 35:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica IGUALDADE exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On DIVIDIDO shift to state 22
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica IGUALDADE exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica IGUALDADE exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica IGUALDADE exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica IGUALDADE exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> exprLogicoAritmetica IGUALDADE exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica IGUALDADE exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica IGUALDADE exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica IGUALDADE exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> exprLogicoAritmetica IGUALDADE exprLogicoAritmetica 
+
+State 36:
+exprLogicoAritmetica -> exprLogicoAritmetica E . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 37
+-- On chamada shift to state 15
+
+State 37:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica E exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica E exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica E exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica E exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica E exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica E exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica E exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica E exprLogicoAritmetica 
+
+State 38:
+exprLogicoAritmetica -> exprLogicoAritmetica DIFERENTE . exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 39
+-- On chamada shift to state 15
+
+State 39:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica DIFERENTE exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On DIVIDIDO shift to state 22
+-- On VIRG reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIFERENTE exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIFERENTE exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIFERENTE exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIFERENTE exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIFERENTE exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIFERENTE exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIFERENTE exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIFERENTE exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> exprLogicoAritmetica DIFERENTE exprLogicoAritmetica 
+
+State 40:
+exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On VEZES reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On OU reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On MODULO reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On MENOS reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On MENOR reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On MAIS reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On MAIOR reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On IN reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On FPAR reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On E reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On DPONTOS reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> APAR exprLogicoAritmetica FPAR 
+
+State 41:
+loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) -> separated_nonempty_list(VIRG,exprLogicoAritmetica) . [ FPAR ]
+-- On FPAR reduce production loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) -> separated_nonempty_list(VIRG,exprLogicoAritmetica) 
+
+State 42:
+chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) . FPAR [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On FPAR shift to state 43
+
+State 43:
+chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On VEZES reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On OU reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On NOVALINHA reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On MODULO reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On MENOS reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On MENORIGUAL reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On MENOR reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On MAIS reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On MAIORIGUAL reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On MAIOR reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On IN reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On IGUALDADE reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On FPAR reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On E reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On DPONTOS reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On DIVIDIDO reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+-- On DIFERENTE reduce production chamada -> ID APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR 
+
+State 44:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+separated_nonempty_list(VIRG,exprLogicoAritmetica) -> exprLogicoAritmetica . [ FPAR ]
+separated_nonempty_list(VIRG,exprLogicoAritmetica) -> exprLogicoAritmetica . VIRG separated_nonempty_list(VIRG,exprLogicoAritmetica) [ FPAR ]
+-- On VIRG shift to state 45
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+-- On FPAR reduce production separated_nonempty_list(VIRG,exprLogicoAritmetica) -> exprLogicoAritmetica 
+
+State 45:
+separated_nonempty_list(VIRG,exprLogicoAritmetica) -> exprLogicoAritmetica VIRG . separated_nonempty_list(VIRG,exprLogicoAritmetica) [ FPAR ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On separated_nonempty_list(VIRG,exprLogicoAritmetica) shift to state 46
+-- On exprLogicoAritmetica shift to state 44
+-- On chamada shift to state 15
+
+State 46:
+separated_nonempty_list(VIRG,exprLogicoAritmetica) -> exprLogicoAritmetica VIRG separated_nonempty_list(VIRG,exprLogicoAritmetica) . [ FPAR ]
+-- On FPAR reduce production separated_nonempty_list(VIRG,exprLogicoAritmetica) -> exprLogicoAritmetica VIRG separated_nonempty_list(VIRG,exprLogicoAritmetica) 
+
+State 47:
+exprLogicoAritmetica -> MENOS exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On VEZES reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On MODULO reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On MENOS reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On MENOR reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On MAIS reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On MAIOR reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> MENOS exprLogicoAritmetica 
+
+State 48:
+exprLogicoAritmetica -> NOT exprLogicoAritmetica . [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VIRG VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE FPAR E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VIRG reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On VEZES reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On OU reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On NOVALINHA reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On MODULO reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On MENOS reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On MENORIGUAL reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On MENOR reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On MAIS reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On MAIORIGUAL reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On MAIOR reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On IN reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On IGUALDADE reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On FPAR reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On E reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On DPONTOS reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On DIVIDIDO reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+-- On DIFERENTE reduce production exprLogicoAritmetica -> NOT exprLogicoAritmetica 
+
+State 49:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+loopWhile -> WHILE exprLogicoAritmetica . DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DPONTOS shift to state 50
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+
+State 50:
+loopWhile -> WHILE exprLogicoAritmetica DPONTOS . NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On NOVALINHA shift to state 51
+
+State 51:
+loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA . INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On INDENTA shift to state 52
+
+State 52:
+loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA . comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE shift to state 1
+-- On RETURN shift to state 53
+-- On PRINT shift to state 57
+-- On INPUTS shift to state 60
+-- On INPUTI shift to state 62
+-- On INPUTF shift to state 64
+-- On IF shift to state 66
+-- On ID shift to state 71
+-- On FOR shift to state 75
+-- On retorno shift to state 85
+-- On print shift to state 86
+-- On nonempty_list(comando) shift to state 87
+-- On loopWhile shift to state 88
+-- On loopFOR shift to state 89
+-- On leias shift to state 90
+-- On leiai shift to state 92
+-- On leiaf shift to state 94
+-- On condicaoIF shift to state 96
+-- On comandos shift to state 129
+-- On comando shift to state 99
+-- On chamadafuncao shift to state 101
+-- On chamada shift to state 102
+-- On atribuicao shift to state 104
+
+State 53:
+retorno -> RETURN . option(exprLogicoAritmetica) NOVALINHA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On option(exprLogicoAritmetica) shift to state 54
+-- On exprLogicoAritmetica shift to state 56
+-- On chamada shift to state 15
+-- On NOVALINHA reduce production option(exprLogicoAritmetica) -> 
+
+State 54:
+retorno -> RETURN option(exprLogicoAritmetica) . NOVALINHA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On NOVALINHA shift to state 55
+
+State 55:
+retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+-- On RETURN reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+-- On PRINT reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+-- On INPUTS reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+-- On INPUTI reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+-- On INPUTF reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+-- On IF reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+-- On ID reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+-- On FOR reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+-- On EOF reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+-- On DEF reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+-- On DEDENTA reduce production retorno -> RETURN option(exprLogicoAritmetica) NOVALINHA 
+
+State 56:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+option(exprLogicoAritmetica) -> exprLogicoAritmetica . [ NOVALINHA ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+-- On NOVALINHA reduce production option(exprLogicoAritmetica) -> exprLogicoAritmetica 
+
+State 57:
+print -> PRINT . exprLogicoAritmetica NOVALINHA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 58
+-- On chamada shift to state 15
+
+State 58:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+print -> PRINT exprLogicoAritmetica . NOVALINHA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On NOVALINHA shift to state 59
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+
+State 59:
+print -> PRINT exprLogicoAritmetica NOVALINHA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+-- On RETURN reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+-- On PRINT reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+-- On INPUTS reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+-- On INPUTI reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+-- On INPUTF reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+-- On IF reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+-- On ID reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+-- On FOR reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+-- On EOF reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+-- On DEF reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+-- On DEDENTA reduce production print -> PRINT exprLogicoAritmetica NOVALINHA 
+
+State 60:
+leias -> INPUTS . exprLogicoAritmetica [ NOVALINHA ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 61
+-- On chamada shift to state 15
+
+State 61:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+leias -> INPUTS exprLogicoAritmetica . [ NOVALINHA ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+-- On NOVALINHA reduce production leias -> INPUTS exprLogicoAritmetica 
+
+State 62:
+leiai -> INPUTI . exprLogicoAritmetica [ NOVALINHA ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 63
+-- On chamada shift to state 15
+
+State 63:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+leiai -> INPUTI exprLogicoAritmetica . [ NOVALINHA ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+-- On NOVALINHA reduce production leiai -> INPUTI exprLogicoAritmetica 
+
+State 64:
+leiaf -> INPUTF . exprLogicoAritmetica [ NOVALINHA ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 65
+-- On chamada shift to state 15
+
+State 65:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+leiaf -> INPUTF exprLogicoAritmetica . [ NOVALINHA ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+-- On NOVALINHA reduce production leiaf -> INPUTF exprLogicoAritmetica 
+
+State 66:
+condicaoIF -> IF . exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 67
+-- On chamada shift to state 15
+
+State 67:
+condicaoIF -> IF exprLogicoAritmetica . DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DPONTOS shift to state 68
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+
+State 68:
+condicaoIF -> IF exprLogicoAritmetica DPONTOS . NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On NOVALINHA shift to state 69
+
+State 69:
+condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA . INDENTA comandos DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On INDENTA shift to state 70
+
+State 70:
+condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA . comandos DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE shift to state 1
+-- On RETURN shift to state 53
+-- On PRINT shift to state 57
+-- On INPUTS shift to state 60
+-- On INPUTI shift to state 62
+-- On INPUTF shift to state 64
+-- On IF shift to state 66
+-- On ID shift to state 71
+-- On FOR shift to state 75
+-- On retorno shift to state 85
+-- On print shift to state 86
+-- On nonempty_list(comando) shift to state 87
+-- On loopWhile shift to state 88
+-- On loopFOR shift to state 89
+-- On leias shift to state 90
+-- On leiai shift to state 92
+-- On leiaf shift to state 94
+-- On condicaoIF shift to state 96
+-- On comandos shift to state 111
+-- On comando shift to state 99
+-- On chamadafuncao shift to state 101
+-- On chamada shift to state 102
+-- On atribuicao shift to state 104
+
+State 71:
+atribuicao -> ID . ATRIB exprLogicoAritmetica NOVALINHA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+chamada -> ID . APAR loption(separated_nonempty_list(VIRG,exprLogicoAritmetica)) FPAR [ NOVALINHA ]
+-- On ATRIB shift to state 72
+-- On APAR shift to state 9
+
+State 72:
+atribuicao -> ID ATRIB . exprLogicoAritmetica NOVALINHA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 73
+-- On chamada shift to state 15
+
+State 73:
+atribuicao -> ID ATRIB exprLogicoAritmetica . NOVALINHA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU NOVALINHA MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On NOVALINHA shift to state 74
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+
+State 74:
+atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+-- On RETURN reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+-- On PRINT reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+-- On INPUTS reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+-- On INPUTI reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+-- On INPUTF reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+-- On IF reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+-- On ID reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+-- On FOR reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+-- On EOF reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+-- On DEF reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+-- On DEDENTA reduce production atribuicao -> ID ATRIB exprLogicoAritmetica NOVALINHA 
+
+State 75:
+loopFOR -> FOR . exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+loopFOR -> FOR . exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 76
+-- On chamada shift to state 15
+
+State 76:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IN IGUALDADE E DIVIDIDO DIFERENTE ]
+loopFOR -> FOR exprLogicoAritmetica . IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+loopFOR -> FOR exprLogicoAritmetica . IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IN shift to state 77
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+
+State 77:
+loopFOR -> FOR exprLogicoAritmetica IN . RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+loopFOR -> FOR exprLogicoAritmetica IN . exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On TRUE shift to state 2
+-- On RANGE shift to state 78
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 105
+-- On chamada shift to state 15
+
+State 78:
+loopFOR -> FOR exprLogicoAritmetica IN RANGE . APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On APAR shift to state 79
+
+State 79:
+loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR . exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 80
+-- On chamada shift to state 15
+
+State 80:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE FPAR E DIVIDIDO DIFERENTE ]
+loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica . FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On FPAR shift to state 81
+-- On E shift to state 36
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+
+State 81:
+loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR . DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On DPONTOS shift to state 82
+
+State 82:
+loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS . NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On NOVALINHA shift to state 83
+
+State 83:
+loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA . INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On INDENTA shift to state 84
+
+State 84:
+loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA . comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE shift to state 1
+-- On RETURN shift to state 53
+-- On PRINT shift to state 57
+-- On INPUTS shift to state 60
+-- On INPUTI shift to state 62
+-- On INPUTF shift to state 64
+-- On IF shift to state 66
+-- On ID shift to state 71
+-- On FOR shift to state 75
+-- On retorno shift to state 85
+-- On print shift to state 86
+-- On nonempty_list(comando) shift to state 87
+-- On loopWhile shift to state 88
+-- On loopFOR shift to state 89
+-- On leias shift to state 90
+-- On leiai shift to state 92
+-- On leiaf shift to state 94
+-- On condicaoIF shift to state 96
+-- On comandos shift to state 97
+-- On comando shift to state 99
+-- On chamadafuncao shift to state 101
+-- On chamada shift to state 102
+-- On atribuicao shift to state 104
+
+State 85:
+comando -> retorno . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production comando -> retorno 
+-- On RETURN reduce production comando -> retorno 
+-- On PRINT reduce production comando -> retorno 
+-- On INPUTS reduce production comando -> retorno 
+-- On INPUTI reduce production comando -> retorno 
+-- On INPUTF reduce production comando -> retorno 
+-- On IF reduce production comando -> retorno 
+-- On ID reduce production comando -> retorno 
+-- On FOR reduce production comando -> retorno 
+-- On EOF reduce production comando -> retorno 
+-- On DEF reduce production comando -> retorno 
+-- On DEDENTA reduce production comando -> retorno 
+
+State 86:
+comando -> print . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production comando -> print 
+-- On RETURN reduce production comando -> print 
+-- On PRINT reduce production comando -> print 
+-- On INPUTS reduce production comando -> print 
+-- On INPUTI reduce production comando -> print 
+-- On INPUTF reduce production comando -> print 
+-- On IF reduce production comando -> print 
+-- On ID reduce production comando -> print 
+-- On FOR reduce production comando -> print 
+-- On EOF reduce production comando -> print 
+-- On DEF reduce production comando -> print 
+-- On DEDENTA reduce production comando -> print 
+
+State 87:
+comandos -> nonempty_list(comando) . [ DEDENTA ]
+-- On DEDENTA reduce production comandos -> nonempty_list(comando) 
+
+State 88:
+comando -> loopWhile . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production comando -> loopWhile 
+-- On RETURN reduce production comando -> loopWhile 
+-- On PRINT reduce production comando -> loopWhile 
+-- On INPUTS reduce production comando -> loopWhile 
+-- On INPUTI reduce production comando -> loopWhile 
+-- On INPUTF reduce production comando -> loopWhile 
+-- On IF reduce production comando -> loopWhile 
+-- On ID reduce production comando -> loopWhile 
+-- On FOR reduce production comando -> loopWhile 
+-- On EOF reduce production comando -> loopWhile 
+-- On DEF reduce production comando -> loopWhile 
+-- On DEDENTA reduce production comando -> loopWhile 
+
+State 89:
+comando -> loopFOR . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production comando -> loopFOR 
+-- On RETURN reduce production comando -> loopFOR 
+-- On PRINT reduce production comando -> loopFOR 
+-- On INPUTS reduce production comando -> loopFOR 
+-- On INPUTI reduce production comando -> loopFOR 
+-- On INPUTF reduce production comando -> loopFOR 
+-- On IF reduce production comando -> loopFOR 
+-- On ID reduce production comando -> loopFOR 
+-- On FOR reduce production comando -> loopFOR 
+-- On EOF reduce production comando -> loopFOR 
+-- On DEF reduce production comando -> loopFOR 
+-- On DEDENTA reduce production comando -> loopFOR 
+
+State 90:
+comando -> leias . NOVALINHA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On NOVALINHA shift to state 91
+
+State 91:
+comando -> leias NOVALINHA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production comando -> leias NOVALINHA 
+-- On RETURN reduce production comando -> leias NOVALINHA 
+-- On PRINT reduce production comando -> leias NOVALINHA 
+-- On INPUTS reduce production comando -> leias NOVALINHA 
+-- On INPUTI reduce production comando -> leias NOVALINHA 
+-- On INPUTF reduce production comando -> leias NOVALINHA 
+-- On IF reduce production comando -> leias NOVALINHA 
+-- On ID reduce production comando -> leias NOVALINHA 
+-- On FOR reduce production comando -> leias NOVALINHA 
+-- On EOF reduce production comando -> leias NOVALINHA 
+-- On DEF reduce production comando -> leias NOVALINHA 
+-- On DEDENTA reduce production comando -> leias NOVALINHA 
+
+State 92:
+comando -> leiai . NOVALINHA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On NOVALINHA shift to state 93
+
+State 93:
+comando -> leiai NOVALINHA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production comando -> leiai NOVALINHA 
+-- On RETURN reduce production comando -> leiai NOVALINHA 
+-- On PRINT reduce production comando -> leiai NOVALINHA 
+-- On INPUTS reduce production comando -> leiai NOVALINHA 
+-- On INPUTI reduce production comando -> leiai NOVALINHA 
+-- On INPUTF reduce production comando -> leiai NOVALINHA 
+-- On IF reduce production comando -> leiai NOVALINHA 
+-- On ID reduce production comando -> leiai NOVALINHA 
+-- On FOR reduce production comando -> leiai NOVALINHA 
+-- On EOF reduce production comando -> leiai NOVALINHA 
+-- On DEF reduce production comando -> leiai NOVALINHA 
+-- On DEDENTA reduce production comando -> leiai NOVALINHA 
+
+State 94:
+comando -> leiaf . NOVALINHA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On NOVALINHA shift to state 95
+
+State 95:
+comando -> leiaf NOVALINHA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production comando -> leiaf NOVALINHA 
+-- On RETURN reduce production comando -> leiaf NOVALINHA 
+-- On PRINT reduce production comando -> leiaf NOVALINHA 
+-- On INPUTS reduce production comando -> leiaf NOVALINHA 
+-- On INPUTI reduce production comando -> leiaf NOVALINHA 
+-- On INPUTF reduce production comando -> leiaf NOVALINHA 
+-- On IF reduce production comando -> leiaf NOVALINHA 
+-- On ID reduce production comando -> leiaf NOVALINHA 
+-- On FOR reduce production comando -> leiaf NOVALINHA 
+-- On EOF reduce production comando -> leiaf NOVALINHA 
+-- On DEF reduce production comando -> leiaf NOVALINHA 
+-- On DEDENTA reduce production comando -> leiaf NOVALINHA 
+
+State 96:
+comando -> condicaoIF . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production comando -> condicaoIF 
+-- On RETURN reduce production comando -> condicaoIF 
+-- On PRINT reduce production comando -> condicaoIF 
+-- On INPUTS reduce production comando -> condicaoIF 
+-- On INPUTI reduce production comando -> condicaoIF 
+-- On INPUTF reduce production comando -> condicaoIF 
+-- On IF reduce production comando -> condicaoIF 
+-- On ID reduce production comando -> condicaoIF 
+-- On FOR reduce production comando -> condicaoIF 
+-- On EOF reduce production comando -> condicaoIF 
+-- On DEF reduce production comando -> condicaoIF 
+-- On DEDENTA reduce production comando -> condicaoIF 
+
+State 97:
+loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos . DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On DEDENTA shift to state 98
+
+State 98:
+loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On RETURN reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On PRINT reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTS reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTI reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTF reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On IF reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On ID reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On FOR reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On EOF reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On DEF reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On DEDENTA reduce production loopFOR -> FOR exprLogicoAritmetica IN RANGE APAR exprLogicoAritmetica FPAR DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+
+State 99:
+nonempty_list(comando) -> comando . [ DEDENTA ]
+nonempty_list(comando) -> comando . nonempty_list(comando) [ DEDENTA ]
+-- On WHILE shift to state 1
+-- On RETURN shift to state 53
+-- On PRINT shift to state 57
+-- On INPUTS shift to state 60
+-- On INPUTI shift to state 62
+-- On INPUTF shift to state 64
+-- On IF shift to state 66
+-- On ID shift to state 71
+-- On FOR shift to state 75
+-- On retorno shift to state 85
+-- On print shift to state 86
+-- On nonempty_list(comando) shift to state 100
+-- On loopWhile shift to state 88
+-- On loopFOR shift to state 89
+-- On leias shift to state 90
+-- On leiai shift to state 92
+-- On leiaf shift to state 94
+-- On condicaoIF shift to state 96
+-- On comando shift to state 99
+-- On chamadafuncao shift to state 101
+-- On chamada shift to state 102
+-- On atribuicao shift to state 104
+-- On DEDENTA reduce production nonempty_list(comando) -> comando 
+
+State 100:
+nonempty_list(comando) -> comando nonempty_list(comando) . [ DEDENTA ]
+-- On DEDENTA reduce production nonempty_list(comando) -> comando nonempty_list(comando) 
+
+State 101:
+comando -> chamadafuncao . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production comando -> chamadafuncao 
+-- On RETURN reduce production comando -> chamadafuncao 
+-- On PRINT reduce production comando -> chamadafuncao 
+-- On INPUTS reduce production comando -> chamadafuncao 
+-- On INPUTI reduce production comando -> chamadafuncao 
+-- On INPUTF reduce production comando -> chamadafuncao 
+-- On IF reduce production comando -> chamadafuncao 
+-- On ID reduce production comando -> chamadafuncao 
+-- On FOR reduce production comando -> chamadafuncao 
+-- On EOF reduce production comando -> chamadafuncao 
+-- On DEF reduce production comando -> chamadafuncao 
+-- On DEDENTA reduce production comando -> chamadafuncao 
+
+State 102:
+chamadafuncao -> chamada . NOVALINHA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On NOVALINHA shift to state 103
+
+State 103:
+chamadafuncao -> chamada NOVALINHA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production chamadafuncao -> chamada NOVALINHA 
+-- On RETURN reduce production chamadafuncao -> chamada NOVALINHA 
+-- On PRINT reduce production chamadafuncao -> chamada NOVALINHA 
+-- On INPUTS reduce production chamadafuncao -> chamada NOVALINHA 
+-- On INPUTI reduce production chamadafuncao -> chamada NOVALINHA 
+-- On INPUTF reduce production chamadafuncao -> chamada NOVALINHA 
+-- On IF reduce production chamadafuncao -> chamada NOVALINHA 
+-- On ID reduce production chamadafuncao -> chamada NOVALINHA 
+-- On FOR reduce production chamadafuncao -> chamada NOVALINHA 
+-- On EOF reduce production chamadafuncao -> chamada NOVALINHA 
+-- On DEF reduce production chamadafuncao -> chamada NOVALINHA 
+-- On DEDENTA reduce production chamadafuncao -> chamada NOVALINHA 
+
+State 104:
+comando -> atribuicao . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production comando -> atribuicao 
+-- On RETURN reduce production comando -> atribuicao 
+-- On PRINT reduce production comando -> atribuicao 
+-- On INPUTS reduce production comando -> atribuicao 
+-- On INPUTI reduce production comando -> atribuicao 
+-- On INPUTF reduce production comando -> atribuicao 
+-- On IF reduce production comando -> atribuicao 
+-- On ID reduce production comando -> atribuicao 
+-- On FOR reduce production comando -> atribuicao 
+-- On EOF reduce production comando -> atribuicao 
+-- On DEF reduce production comando -> atribuicao 
+-- On DEDENTA reduce production comando -> atribuicao 
+
+State 105:
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica . DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DPONTOS shift to state 106
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+
+State 106:
+loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS . NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On NOVALINHA shift to state 107
+
+State 107:
+loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA . INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On INDENTA shift to state 108
+
+State 108:
+loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA . comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE shift to state 1
+-- On RETURN shift to state 53
+-- On PRINT shift to state 57
+-- On INPUTS shift to state 60
+-- On INPUTI shift to state 62
+-- On INPUTF shift to state 64
+-- On IF shift to state 66
+-- On ID shift to state 71
+-- On FOR shift to state 75
+-- On retorno shift to state 85
+-- On print shift to state 86
+-- On nonempty_list(comando) shift to state 87
+-- On loopWhile shift to state 88
+-- On loopFOR shift to state 89
+-- On leias shift to state 90
+-- On leiai shift to state 92
+-- On leiaf shift to state 94
+-- On condicaoIF shift to state 96
+-- On comandos shift to state 109
+-- On comando shift to state 99
+-- On chamadafuncao shift to state 101
+-- On chamada shift to state 102
+-- On atribuicao shift to state 104
+
+State 109:
+loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos . DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On DEDENTA shift to state 110
+
+State 110:
+loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On RETURN reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On PRINT reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTS reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTI reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTF reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On IF reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On ID reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On FOR reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On EOF reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On DEF reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On DEDENTA reduce production loopFOR -> FOR exprLogicoAritmetica IN exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+
+State 111:
+condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos . DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On DEDENTA shift to state 112
+
+State 112:
+condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA . option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On ELSE shift to state 113
+-- On ELIF shift to state 119
+-- On option(condicaoELIFELSE) shift to state 128
+-- On condicaoELIFELSE shift to state 127
+-- On WHILE reduce production option(condicaoELIFELSE) -> 
+-- On RETURN reduce production option(condicaoELIFELSE) -> 
+-- On PRINT reduce production option(condicaoELIFELSE) -> 
+-- On INPUTS reduce production option(condicaoELIFELSE) -> 
+-- On INPUTI reduce production option(condicaoELIFELSE) -> 
+-- On INPUTF reduce production option(condicaoELIFELSE) -> 
+-- On IF reduce production option(condicaoELIFELSE) -> 
+-- On ID reduce production option(condicaoELIFELSE) -> 
+-- On FOR reduce production option(condicaoELIFELSE) -> 
+-- On EOF reduce production option(condicaoELIFELSE) -> 
+-- On DEF reduce production option(condicaoELIFELSE) -> 
+-- On DEDENTA reduce production option(condicaoELIFELSE) -> 
+
+State 113:
+condicaoELIFELSE -> ELSE . DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On DPONTOS shift to state 114
+
+State 114:
+condicaoELIFELSE -> ELSE DPONTOS . NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On NOVALINHA shift to state 115
+
+State 115:
+condicaoELIFELSE -> ELSE DPONTOS NOVALINHA . INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On INDENTA shift to state 116
+
+State 116:
+condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA . comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE shift to state 1
+-- On RETURN shift to state 53
+-- On PRINT shift to state 57
+-- On INPUTS shift to state 60
+-- On INPUTI shift to state 62
+-- On INPUTF shift to state 64
+-- On IF shift to state 66
+-- On ID shift to state 71
+-- On FOR shift to state 75
+-- On retorno shift to state 85
+-- On print shift to state 86
+-- On nonempty_list(comando) shift to state 87
+-- On loopWhile shift to state 88
+-- On loopFOR shift to state 89
+-- On leias shift to state 90
+-- On leiai shift to state 92
+-- On leiaf shift to state 94
+-- On condicaoIF shift to state 96
+-- On comandos shift to state 117
+-- On comando shift to state 99
+-- On chamadafuncao shift to state 101
+-- On chamada shift to state 102
+-- On atribuicao shift to state 104
+
+State 117:
+condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos . DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On DEDENTA shift to state 118
+
+State 118:
+condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On RETURN reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On PRINT reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTS reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTI reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTF reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On IF reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On ID reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On FOR reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On EOF reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On DEF reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On DEDENTA reduce production condicaoELIFELSE -> ELSE DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+
+State 119:
+condicaoELIFELSE -> ELIF . exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On TRUE shift to state 2
+-- On NOT shift to state 3
+-- On MENOS shift to state 4
+-- On LITSTRING shift to state 5
+-- On LITINT shift to state 6
+-- On LITFLOAT shift to state 7
+-- On ID shift to state 8
+-- On FALSE shift to state 10
+-- On APAR shift to state 11
+-- On exprLogicoAritmetica shift to state 120
+-- On chamada shift to state 15
+
+State 120:
+condicaoELIFELSE -> ELIF exprLogicoAritmetica . DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOS exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . VEZES exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIVIDIDO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MODULO exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . IGUALDADE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MAIORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENOR exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . MENORIGUAL exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . DIFERENTE exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . E exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+exprLogicoAritmetica -> exprLogicoAritmetica . OU exprLogicoAritmetica [ VEZES OU MODULO MENOS MENORIGUAL MENOR MAIS MAIORIGUAL MAIOR IGUALDADE E DPONTOS DIVIDIDO DIFERENTE ]
+-- On VEZES shift to state 13
+-- On OU shift to state 16
+-- On MODULO shift to state 18
+-- On MENOS shift to state 20
+-- On MENORIGUAL shift to state 24
+-- On MENOR shift to state 28
+-- On MAIS shift to state 26
+-- On MAIORIGUAL shift to state 30
+-- On MAIOR shift to state 32
+-- On IGUALDADE shift to state 34
+-- On E shift to state 36
+-- On DPONTOS shift to state 121
+-- On DIVIDIDO shift to state 22
+-- On DIFERENTE shift to state 38
+
+State 121:
+condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS . NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On NOVALINHA shift to state 122
+
+State 122:
+condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA . INDENTA comandos DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On INDENTA shift to state 123
+
+State 123:
+condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA . comandos DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE shift to state 1
+-- On RETURN shift to state 53
+-- On PRINT shift to state 57
+-- On INPUTS shift to state 60
+-- On INPUTI shift to state 62
+-- On INPUTF shift to state 64
+-- On IF shift to state 66
+-- On ID shift to state 71
+-- On FOR shift to state 75
+-- On retorno shift to state 85
+-- On print shift to state 86
+-- On nonempty_list(comando) shift to state 87
+-- On loopWhile shift to state 88
+-- On loopFOR shift to state 89
+-- On leias shift to state 90
+-- On leiai shift to state 92
+-- On leiaf shift to state 94
+-- On condicaoIF shift to state 96
+-- On comandos shift to state 124
+-- On comando shift to state 99
+-- On chamadafuncao shift to state 101
+-- On chamada shift to state 102
+-- On atribuicao shift to state 104
+
+State 124:
+condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos . DEDENTA option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On DEDENTA shift to state 125
+
+State 125:
+condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA . option(condicaoELIFELSE) [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On ELSE shift to state 113
+-- On ELIF shift to state 119
+-- On option(condicaoELIFELSE) shift to state 126
+-- On condicaoELIFELSE shift to state 127
+-- On WHILE reduce production option(condicaoELIFELSE) -> 
+-- On RETURN reduce production option(condicaoELIFELSE) -> 
+-- On PRINT reduce production option(condicaoELIFELSE) -> 
+-- On INPUTS reduce production option(condicaoELIFELSE) -> 
+-- On INPUTI reduce production option(condicaoELIFELSE) -> 
+-- On INPUTF reduce production option(condicaoELIFELSE) -> 
+-- On IF reduce production option(condicaoELIFELSE) -> 
+-- On ID reduce production option(condicaoELIFELSE) -> 
+-- On FOR reduce production option(condicaoELIFELSE) -> 
+-- On EOF reduce production option(condicaoELIFELSE) -> 
+-- On DEF reduce production option(condicaoELIFELSE) -> 
+-- On DEDENTA reduce production option(condicaoELIFELSE) -> 
+
+State 126:
+condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On RETURN reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On PRINT reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On INPUTS reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On INPUTI reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On INPUTF reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On IF reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On ID reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On FOR reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On EOF reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On DEF reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On DEDENTA reduce production condicaoELIFELSE -> ELIF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+
+State 127:
+option(condicaoELIFELSE) -> condicaoELIFELSE . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+-- On RETURN reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+-- On PRINT reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+-- On INPUTS reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+-- On INPUTI reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+-- On INPUTF reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+-- On IF reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+-- On ID reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+-- On FOR reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+-- On EOF reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+-- On DEF reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+-- On DEDENTA reduce production option(condicaoELIFELSE) -> condicaoELIFELSE 
+
+State 128:
+condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On RETURN reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On PRINT reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On INPUTS reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On INPUTI reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On INPUTF reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On IF reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On ID reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On FOR reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On EOF reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On DEF reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+-- On DEDENTA reduce production condicaoIF -> IF exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA option(condicaoELIFELSE) 
+
+State 129:
+loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos . DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On DEDENTA shift to state 130
+
+State 130:
+loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF DEDENTA ]
+-- On WHILE reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On RETURN reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On PRINT reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTS reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTI reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTF reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On IF reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On ID reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On FOR reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On EOF reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On DEF reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On DEDENTA reduce production loopWhile -> WHILE exprLogicoAritmetica DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+
+State 131:
+funcao -> DEF . ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On ID shift to state 132
+
+State 132:
+funcao -> DEF ID . APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On APAR shift to state 133
+
+State 133:
+funcao -> DEF ID APAR . loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On ID shift to state 134
+-- On separated_nonempty_list(VIRG,parametro) shift to state 142
+-- On parametro shift to state 143
+-- On loption(separated_nonempty_list(VIRG,parametro)) shift to state 146
+-- On FPAR reduce production loption(separated_nonempty_list(VIRG,parametro)) -> 
+
+State 134:
+parametro -> ID . DPONTOS tipo [ VIRG FPAR ]
+-- On DPONTOS shift to state 135
+
+State 135:
+parametro -> ID DPONTOS . tipo [ VIRG FPAR ]
+-- On STR shift to state 136
+-- On NONE shift to state 137
+-- On INT shift to state 138
+-- On FLOAT shift to state 139
+-- On BOOL shift to state 140
+-- On tipo shift to state 141
+
+State 136:
+tipo -> STR . [ VIRG FPAR DPONTOS ]
+-- On VIRG reduce production tipo -> STR 
+-- On FPAR reduce production tipo -> STR 
+-- On DPONTOS reduce production tipo -> STR 
+
+State 137:
+tipo -> NONE . [ VIRG FPAR DPONTOS ]
+-- On VIRG reduce production tipo -> NONE 
+-- On FPAR reduce production tipo -> NONE 
+-- On DPONTOS reduce production tipo -> NONE 
+
+State 138:
+tipo -> INT . [ VIRG FPAR DPONTOS ]
+-- On VIRG reduce production tipo -> INT 
+-- On FPAR reduce production tipo -> INT 
+-- On DPONTOS reduce production tipo -> INT 
+
+State 139:
+tipo -> FLOAT . [ VIRG FPAR DPONTOS ]
+-- On VIRG reduce production tipo -> FLOAT 
+-- On FPAR reduce production tipo -> FLOAT 
+-- On DPONTOS reduce production tipo -> FLOAT 
+
+State 140:
+tipo -> BOOL . [ VIRG FPAR DPONTOS ]
+-- On VIRG reduce production tipo -> BOOL 
+-- On FPAR reduce production tipo -> BOOL 
+-- On DPONTOS reduce production tipo -> BOOL 
+
+State 141:
+parametro -> ID DPONTOS tipo . [ VIRG FPAR ]
+-- On VIRG reduce production parametro -> ID DPONTOS tipo 
+-- On FPAR reduce production parametro -> ID DPONTOS tipo 
+
+State 142:
+loption(separated_nonempty_list(VIRG,parametro)) -> separated_nonempty_list(VIRG,parametro) . [ FPAR ]
+-- On FPAR reduce production loption(separated_nonempty_list(VIRG,parametro)) -> separated_nonempty_list(VIRG,parametro) 
+
+State 143:
+separated_nonempty_list(VIRG,parametro) -> parametro . [ FPAR ]
+separated_nonempty_list(VIRG,parametro) -> parametro . VIRG separated_nonempty_list(VIRG,parametro) [ FPAR ]
+-- On VIRG shift to state 144
+-- On FPAR reduce production separated_nonempty_list(VIRG,parametro) -> parametro 
+
+State 144:
+separated_nonempty_list(VIRG,parametro) -> parametro VIRG . separated_nonempty_list(VIRG,parametro) [ FPAR ]
+-- On ID shift to state 134
+-- On separated_nonempty_list(VIRG,parametro) shift to state 145
+-- On parametro shift to state 143
+
+State 145:
+separated_nonempty_list(VIRG,parametro) -> parametro VIRG separated_nonempty_list(VIRG,parametro) . [ FPAR ]
+-- On FPAR reduce production separated_nonempty_list(VIRG,parametro) -> parametro VIRG separated_nonempty_list(VIRG,parametro) 
+
+State 146:
+funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) . FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On FPAR shift to state 147
+
+State 147:
+funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR . SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On SETA shift to state 148
+
+State 148:
+funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA . tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On STR shift to state 136
+-- On NONE shift to state 137
+-- On INT shift to state 138
+-- On FLOAT shift to state 139
+-- On BOOL shift to state 140
+-- On tipo shift to state 149
+
+State 149:
+funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo . DPONTOS NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On DPONTOS shift to state 150
+
+State 150:
+funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS . NOVALINHA INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On NOVALINHA shift to state 151
+
+State 151:
+funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA . INDENTA comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On INDENTA shift to state 152
+
+State 152:
+funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA . comandos DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On WHILE shift to state 1
+-- On RETURN shift to state 53
+-- On PRINT shift to state 57
+-- On INPUTS shift to state 60
+-- On INPUTI shift to state 62
+-- On INPUTF shift to state 64
+-- On IF shift to state 66
+-- On ID shift to state 71
+-- On FOR shift to state 75
+-- On retorno shift to state 85
+-- On print shift to state 86
+-- On nonempty_list(comando) shift to state 87
+-- On loopWhile shift to state 88
+-- On loopFOR shift to state 89
+-- On leias shift to state 90
+-- On leiai shift to state 92
+-- On leiaf shift to state 94
+-- On condicaoIF shift to state 96
+-- On comandos shift to state 153
+-- On comando shift to state 99
+-- On chamadafuncao shift to state 101
+-- On chamada shift to state 102
+-- On atribuicao shift to state 104
+
+State 153:
+funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos . DEDENTA [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On DEDENTA shift to state 154
+
+State 154:
+funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On WHILE reduce production funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On RETURN reduce production funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On PRINT reduce production funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTS reduce production funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTI reduce production funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On INPUTF reduce production funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On IF reduce production funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On ID reduce production funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On FOR reduce production funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On EOF reduce production funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+-- On DEF reduce production funcao -> DEF ID APAR loption(separated_nonempty_list(VIRG,parametro)) FPAR SETA tipo DPONTOS NOVALINHA INDENTA comandos DEDENTA 
+
+State 155:
+programa' -> programa . [ # ]
+-- On # accept programa
+
+State 156:
+programa -> list(instrucao) . EOF [ # ]
+-- On EOF shift to state 157
+
+State 157:
+programa -> list(instrucao) EOF . [ # ]
+-- On # reduce production programa -> list(instrucao) EOF 
+
+State 158:
+list(instrucao) -> instrucao . list(instrucao) [ EOF ]
+-- On WHILE shift to state 1
+-- On RETURN shift to state 53
+-- On PRINT shift to state 57
+-- On INPUTS shift to state 60
+-- On INPUTI shift to state 62
+-- On INPUTF shift to state 64
+-- On IF shift to state 66
+-- On ID shift to state 71
+-- On FOR shift to state 75
+-- On DEF shift to state 131
+-- On retorno shift to state 85
+-- On print shift to state 86
+-- On loopWhile shift to state 88
+-- On loopFOR shift to state 89
+-- On list(instrucao) shift to state 159
+-- On leias shift to state 90
+-- On leiai shift to state 92
+-- On leiaf shift to state 94
+-- On instrucao shift to state 158
+-- On funcao shift to state 160
+-- On condicaoIF shift to state 96
+-- On comando shift to state 161
+-- On chamadafuncao shift to state 101
+-- On chamada shift to state 102
+-- On atribuicao shift to state 104
+-- On EOF reduce production list(instrucao) -> 
+
+State 159:
+list(instrucao) -> instrucao list(instrucao) . [ EOF ]
+-- On EOF reduce production list(instrucao) -> instrucao list(instrucao) 
+
+State 160:
+instrucao -> funcao . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On WHILE reduce production instrucao -> funcao 
+-- On RETURN reduce production instrucao -> funcao 
+-- On PRINT reduce production instrucao -> funcao 
+-- On INPUTS reduce production instrucao -> funcao 
+-- On INPUTI reduce production instrucao -> funcao 
+-- On INPUTF reduce production instrucao -> funcao 
+-- On IF reduce production instrucao -> funcao 
+-- On ID reduce production instrucao -> funcao 
+-- On FOR reduce production instrucao -> funcao 
+-- On EOF reduce production instrucao -> funcao 
+-- On DEF reduce production instrucao -> funcao 
+
+State 161:
+instrucao -> comando . [ WHILE RETURN PRINT INPUTS INPUTI INPUTF IF ID FOR EOF DEF ]
+-- On WHILE reduce production instrucao -> comando 
+-- On RETURN reduce production instrucao -> comando 
+-- On PRINT reduce production instrucao -> comando 
+-- On INPUTS reduce production instrucao -> comando 
+-- On INPUTI reduce production instrucao -> comando 
+-- On INPUTF reduce production instrucao -> comando 
+-- On IF reduce production instrucao -> comando 
+-- On ID reduce production instrucao -> comando 
+-- On FOR reduce production instrucao -> comando 
+-- On EOF reduce production instrucao -> comando 
+-- On DEF reduce production instrucao -> comando 
+
